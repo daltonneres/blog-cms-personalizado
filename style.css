@@ -1,29 +1,555 @@
 /* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
 
 /* BODY */
-body { background-color: #f0f8ff; color: #333; line-height: 1.6; }
+body {
+  background-color: #fdfcf7;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
 
 /* CONTAINER */
-.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 /* HEADER */
-.header { background-color: #2a5d84; color: #fff; padding: 20px 0; }
-.header h1 { text-align: center; margin-bottom: 10px; }
-.header nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; }
-.header nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
-.header nav ul li a:hover { text-decoration: underline; }
+.header {
+  background: linear-gradient(90deg, #d1b85b, #87ceeb);
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+}
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.header nav ul li a:hover {
+  color: #ffe680;
+}
 
-/* MAIN */
-.main { padding: 40px 0; }
-.posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.post-card { background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-.post-card h3 { margin-bottom: 10px; color: #2a5d84; }
-.post-card p { margin-bottom: 15px; }
-.btn { display: inline-block; padding: 10px 15px; background-color: #2a5d84; color: #fff; text-decoration: none; border-radius: 5px; }
-.btn:hover { background-color: #1d3f5c; }
+/* INTRO */
+.intro {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.intro h2 {
+  color: #d1b85b;
+  margin-bottom: 15px;
+}
+.intro p {
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 1rem;
+  color: #444;
+}
 
-/* FOOTER */
-.footer { background-color: #2a5d84; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px; }
-.rodape-final a { color: #fff; text-decoration: none; }
-.rodape-final a:hover { text-decoration: underline; }
+/* MENSAGEM DO DIA */
+.mensagem-dia {
+  background-color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+.mensagem-card {
+  background: #fdfcf7;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 0 auto;
+  transition: transform 0.3s;
+}
+.mensagem-card:hover {
+  transform: translateY(-5px);
+}
+.mensagem-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.mensagem-card h3 {
+  color: #d1b85b;
+  margin-bottom: 10px;
+}
+.data {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* LEITURAS */
+.leituras {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.leitura-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ARTIGOS / REFLEXÕES */
+.artigos {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.descricao-artigos {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #444;
+}
+.artigos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.artigo-card {
+  background: #fdfcf7;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.artigo-card:hover {
+  transform: translateY(-5px);
+}
+.artigo-card h4 {
+  margin-bottom: 10px;
+  color: #d1b85b;
+}
+.artigo-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+.artigo-card a.btn {
+  font-size: 0.9rem;
+}
+
+/* DEPOIMENTOS */
+.depoimentos {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.depoimento {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  font-style: italic;
+}
+.depoimento span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d1b85b;
+}
+
+/* NOVENAS */
+.novenas {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.novenas .artigos-grid {
+  gap: 20px;
+}
+.novenas .artigo-card h4 {
+  color: #87ceeb;
+}
+
+/* MÚSICAS */
+.musicas {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.musicas a.btn {
+  margin-top: 20px;
+}
+
+/* CATEQUESE */
+.catequese {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.catequese a.btn {
+  margin-top: 20px;
+}
+
+/* CONTATO */
+.contato {
+  background-color: #fdfcf7;
+  padding: 60px 20px;
+  text-align: center;
+}
+.contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.contato input, .contato textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contato button {
+  align-self: center;
+}
+
+/* BOTÃO GLOBAL */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #87ceeb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn:hover {
+  background-color: #5aa8d9;
+  transform: translateY(-2px);
+}
+
+/* RODAPÉ */
+.footer {
+  background: linear-gradient(90deg, #87ceeb, #d1b85b);
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 50px;
+}
+.rodape-final a {
+  color: #fff;
+  text-decoration: none;
+}
+.rodape-final a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .mensagem-card img, .post-img {
+    height: 200px;
+  }
+}
+
+/* ORAÇÕES */
+.oracoes {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.oracoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.oracao-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.oracao-card:hover {
+  transform: translateY(-5px);
+}
+.oracao-card h4 {
+  color: #d1b85b;
+  margin-bottom: 10px;
+}
+
+/* TERÇO */
+.terco {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.terco-conteudo {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.terco-img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.terco-texto {
+  max-width: 600px;
+  text-align: left;
+}
+.terco-texto ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+/* SANTOS E HISTÓRIA BÍBLICA */
+.historia-biblica {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.historia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+.historia-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.historia-card:hover {
+  transform: translateY(-5px);
+}
+.historia-card h3 {
+  color: #d1b85b;
+  margin-bottom: 12px;
+}
+.historia-card p {
+  margin-bottom: 15px;
+}
+
+.dia-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.dia-card {
+  flex: 1 1 250px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dia-card h3 {
+  margin-bottom: 10px;
+}
+
+.dia-card .btn {
+  text-decoration: none;
+  background-color: #87ceeb;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* RESPONSIVO */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+  .dia-grid, 
+  .artigos-grid, 
+  .oracoes-grid, 
+  .historia-grid, 
+  .depoimentos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .terco-conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Celulares e telas pequenas */
+@media (max-width: 768px) {
+  .header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mensagem-card img,
+  .post-img {
+    height: auto;
+  }
+
+  .intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .mensagem-card,
+  .leitura-card,
+  .dia-card,
+  .artigo-card,
+  .oracao-card,
+  .historia-card {
+    max-width: 100%;
+  }
+}
+
+/* Telas muito pequenas / celulares estreitos */
+@media (max-width: 480px) {
+  .intro p,
+  .dia-card p,
+  .leitura-card p,
+  .artigo-card p,
+  .oracao-card p,
+  .historia-card p {
+    font-size: 0.9rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
+
+/* === RODAPÉ EM COLUNAS === */
+.footer {
+  background: linear-gradient(90deg, #87ceeb, #d1b85b);
+  color: #fff;
+  padding: 50px 20px 20px;
+  margin-top: 60px;
+  font-size: 0.95rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  color: #f9f9f9;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #f0e68c; /* tom dourado leve */
+}
+
+/* Ícone PNG do Instagram */
+.social-icon img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  padding: 6px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.social-icon img:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.4);
+  text-align: center;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-bottom a:hover {
+  color: #f0e68c;
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-grid {
+    text-align: center;
+  }
+  .social-icon {
+    display: inline-block;
+    margin-top: 10px;
+  }
+}

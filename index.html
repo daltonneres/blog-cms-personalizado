@@ -3,52 +3,409 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Educação</title>
-  <meta name="description" content="Blog educativo com conteúdos, artigos e dicas de aprendizagem.">
-  <link rel="icon" href="favicon-blog.ico" type="image/x-icon">
+  <title>Espalhando a Palavra de Jesus</title>
+  <meta name="description" content="Portal católico com mensagens diárias, leituras bíblicas, orações, novenas, músicas e calendário litúrgico.">
+  <link rel="icon" href="favicon-cross.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Cabeçalho -->
-  <header class="header">
+<header class="header">
+  <div class="container">
+    <h1>Espalhando a Palavra de Jesus</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#mensagens">Mensagem do Dia</a></li>
+        <li><a href="#dia">Santo e Palavra do Dia</a></li>
+        <li><a href="#leituras">Leituras Bíblicas</a></li>
+        <li><a href="#reflexoes">Reflexões</a></li>
+        <li><a href="#historia-biblica">Santos e História Bíblica</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#novenas">Novenas</a></li>
+        <li><a href="#oracoes">Orações Tradicionais</a></li>
+        <li><a href="#terco">Como Rezar o Terço</a></li>
+        <li><a href="#musicas">Músicas</a></li>
+        <li><a href="#catequese">Catequese</a></li>
+        <li><a href="#calendario">Calendário</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- Objetivo -->
+  <section id="inicio" class="intro">
     <div class="container">
-      <h1>Blog Educação</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Artigos</a></li>
-          <li><a href="#">Categorias</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
+      <h2>Nosso Propósito</h2>
+      <p>
+        O site <strong>“Espalhando a Palavra de Jesus”</strong> nasceu com o objetivo de levar a fé e o amor de Cristo a todos os cantos da internet.
+        A inspiração surgiu em um <strong>encontro de jovens católicos</strong>, onde refletimos sobre como podemos evangelizar também pelos meios digitais.
+      </p>
+      <p>
+        A partir daí, surgiu este projeto: um espaço para <strong>mensagens diárias, orações, reflexões e partilhas de fé</strong>, 
+        ajudando a aproximar pessoas de Deus com amor e simplicidade.
+      </p>
     </div>
-  </header>
+  </section>
 
-  <!-- Conteúdo principal -->
-  <main class="main">
-    <section class="posts">
-      <div class="post-card">
-        <h3>Como Aprender de Forma Eficiente</h3>
-        <p>Dicas e estratégias para melhorar sua aprendizagem e produtividade nos estudos.</p>
-        <a href="#" class="btn" target="_blank">Ler Mais</a>
+  <!-- Mensagem Diária -->
+  <section id="mensagens" class="mensagem-dia">
+    <div class="container">
+      <h2>📖 Mensagem do Dia</h2>
+      <p id="data-atual" class="data"></p>
+      <div class="mensagem-card">
+        <img id="imagem-dia" src="" alt="Imagem do dia">
+        <h3 id="titulo-mensagem"></h3>
+        <p id="texto-mensagem"></p>
+        <button id="compartilhar" class="btn">📤 Compartilhar Mensagem</button>
       </div>
-      <div class="post-card">
-        <h3>Tecnologias na Educação</h3>
-        <p>Ferramentas digitais que ajudam professores e alunos a terem aulas mais interativas.</p>
-        <a href="#" class="btn" target="_blank">Ler Mais</a>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Rodapé -->
-  <footer class="footer">
-    <p class="rodape-final">
-      Desenvolvido por
-      <a href="https://github.com/daltonneres" target="_blank">
-        Dalton Neres - Full Stack Developer
-      </a>
-      <br>Última atualização: 19/10/2025
+<!-- Santo, Palavra e Oração do Dia -->
+<section id="dia" class="dia">
+  <div class="container">
+    <h2 style="text-align: center;">🌟 Santo, Palavra e Oração do Dia</h2>
+    <p style="text-align: center; max-width: 600px; margin: 10px auto 30px auto;">
+      Descubra o Santo do Dia, a Palavra do Dia e as Orações recomendadas pelo Vaticano. 
+      Fortaleça sua fé e aproxime-se de Deus através das leituras e preces diárias.
     </p>
-  </footer>
+    <div class="dia-grid">
+      <div class="dia-card">
+        <h3>Santo do Dia</h3>
+        <a id="link-santo" href="https://www.vaticannews.va/pt/santo-do-dia.html" target="_blank" class="btn">Ver Santo do Dia</a>
+      </div>
+      <div class="dia-card">
+        <h3>Palavra do Dia</h3>
+        <a id="link-palavra" href="https://www.vaticannews.va/pt/palavra-do-dia.html" target="_blank" class="btn">Ler Palavra do Dia</a>
+      </div>
+      <div class="dia-card">
+        <h3>Oração do Dia</h3>
+        <a id="link-oracao" href="https://www.vaticannews.va/pt/oracoes.html" target="_blank" class="btn">Ver Orações</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Leituras Bíblicas -->
+  <section id="leituras" class="leituras">
+    <div class="container">
+      <h2>📜 Leituras Bíblicas</h2>
+
+      <div class="leitura-card">
+        <h3>Lucas 15:11-32 — O Filho Pródigo</h3>
+        <p>Deus nos ensina o poder do perdão e da misericórdia, acolhendo com amor os que retornam ao Seu caminho.</p>
+      </div>
+
+      <div class="leitura-card">
+        <h3>Mateus 6:9-13 — O Pai Nosso</h3>
+        <p>A oração que nos une a Deus e resume o amor e a confiança que devemos depositar n’Ele.</p>
+      </div>
+
+      <div class="leitura-card">
+        <h3>Salmo 91 — Proteção Divina</h3>
+        <p>Em Deus encontramos abrigo e força. Sua fidelidade é escudo e proteção.</p>
+      </div>
+
+      <div class="leitura-card">
+        <h3>João 3:16 — O Amor de Deus</h3>
+        <p>“Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito...” — o centro da nossa fé cristã.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reflexões -->
+  <section id="reflexoes" class="artigos">
+    <div class="container">
+      <h2>🕊️ Reflexões e Conteúdos Católicos</h2>
+      <p class="descricao-artigos">Leia e aprofunde sua fé através de portais católicos de confiança:</p>
+
+      <div class="artigos-grid">
+        <div class="artigo-card">
+          <h4>Vatican News</h4>
+          <p>Notícias oficiais do Vaticano e mensagens do Papa Francisco.</p>
+          <a href="https://www.vaticannews.va/pt.html" target="_blank" class="btn">Acessar</a>
+        </div>
+
+        <div class="artigo-card">
+          <h4>Canção Nova</h4>
+          <p>Artigos de formação espiritual, fé e testemunhos cristãos.</p>
+          <a href="https://www.cancaonova.com/categoria/formacao/" target="_blank" class="btn">Acessar</a>
+        </div>
+
+        <div class="artigo-card">
+          <h4>Aleteia</h4>
+          <p>Portal internacional com histórias e reflexões inspiradoras.</p>
+          <a href="https://pt.aleteia.org/" target="_blank" class="btn">Acessar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Santos e História Bíblica -->
+<section id="historia-biblica" class="historia-biblica">
+  <div class="container">
+    <h2>✝️ Santos e História Bíblica</h2>
+    <p>Conheça a vida dos santos e os acontecimentos importantes da Bíblia que fortalecem nossa fé.</p>
+
+    <div class="historia-grid">
+      <!-- Santos -->
+      <div class="historia-card">
+        <h3>Santos da Igreja</h3>
+        <p>Os santos são exemplos de fé, coragem e amor a Deus. Cada um viveu sua vocação e deixou um legado espiritual que nos inspira até hoje.</p>
+        <a href="https://rcnbr.wordpress.com/santos-e-santas-catolicos/" target="_blank" class="btn">Conhecer Santos</a>
+      </div>
+
+      <!-- Nascimento de Jesus -->
+      <div class="historia-card">
+        <h3>Nascimento de Jesus</h3>
+        <p>O nascimento de Jesus em Belém é o evento central da fé cristã. Celebramos o Natal para lembrar que Deus se fez homem e veio salvar a humanidade.</p>
+        <a href="https://www.biblegateway.com/passage/?search=Lucas%202%3A1-7%3A30&version=OL" target="_blank" class="btn">Mais sobre o Natal</a>
+      </div>
+
+      <!-- Adão e Eva -->
+      <div class="historia-card">
+        <h3>Adão e Eva</h3>
+        <p>O primeiro homem e a primeira mulher, segundo a Bíblia, representam o início da história humana e o início da relação entre Deus e a humanidade.</p>
+        <a href="https://formacao.cancaonova.com/igreja/doutrina/adao-e-eva-existiram-de-verdade/" target="_blank" class="btn">Saiba Mais</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="depoimentos">
+    <div class="container">
+      <h2>💬 Depoimentos de Fé</h2>
+      <p class="descricao">Testemunhos de pessoas que experimentaram o amor e a presença de Deus em suas vidas.</p>
+
+      <div class="depoimentos-grid">
+        <div class="depoimento">
+          <p>“Após uma fase difícil, encontrei neste site mensagens que renovaram minha fé e me aproximaram de Deus.”</p>
+          <span>— Maria, SP</span>
+        </div>
+        <div class="depoimento">
+          <p>“A Palavra diária me acompanha todas as manhãs. É como se Deus falasse comigo.”</p>
+          <span>— João, PR</span>
+        </div>
+        <div class="depoimento">
+          <p>“Participei de uma novena indicada aqui e vivi um verdadeiro milagre na minha família.”</p>
+          <span>— Ana, MG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Novenas -->
+  <section id="novenas" class="novenas">
+    <div class="container">
+      <h2>🙏 Novenas e Orações</h2>
+      <p>Aproxime-se de Deus através da oração constante e da devoção.</p>
+
+      <div class="artigos-grid">
+        <div class="artigo-card">
+          <h4>Novena de Nossa Senhora Aparecida</h4>
+          <p>Reze por nove dias pedindo a intercessão da Mãe Aparecida.</p>
+          <a href="https://www.a12.com/novena" target="_blank" class="btn">Rezar</a>
+        </div>
+        <div class="artigo-card">
+          <h4>Novena do Sagrado Coração de Jesus</h4>
+          <p>Oração de entrega e confiança no coração misericordioso de Cristo.</p>
+          <a href="https://www.vaticannews.va/pt/oracoes.html" target="_blank" class="btn">Rezar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Orações Tradicionais -->
+<section id="oracoes" class="oracoes">
+  <div class="container">
+    <h2>🙏 Orações Tradicionais</h2>
+    <p>Aprenda ou relembre as principais orações da fé católica:</p>
+
+    <div class="oracoes-grid">
+      <div class="oracao-card">
+        <h4>Pai Nosso</h4>
+        <p>Oração ensinada por Jesus aos Seus discípulos, centralizando a fé em Deus Pai.</p>
+        <a href="https://www.vaticannews.va/pt/oracoes/pai-nosso.html" target="_blank" class="btn">Ler Oração Completa</a>
+      </div>
+
+      <div class="oracao-card">
+        <h4>Ave Maria</h4>
+        <p>Oração de louvor e pedido de intercessão à Virgem Maria, Mãe de Jesus.</p>
+        <a href="https://www.vaticannews.va/pt/oracoes/ave-maria.html" target="_blank" class="btn">Ler Oração Completa</a>
+      </div>
+
+      <div class="oracao-card">
+        <h4>Creio</h4>
+        <p>Profissão de fé que resume as principais verdades da doutrina cristã.</p>
+        <a href="https://santuario.cancaonova.com/terco/creio/" target="_blank" class="btn">Ler Oração Completa</a>
+      </div>
+
+      <div class="oracao-card">
+        <h4>Salve Rainha</h4>
+        <p>Oração de devoção à Virgem Maria, pedindo proteção e intercessão maternal.</p>
+        <a href="https://www.vaticannews.va/pt/oracoes/salve-rainha.html" target="_blank" class="btn">Ler Oração Completa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Como Rezar o Terço -->
+<section id="terco" class="terco">
+  <div class="container">
+    <h2>📿 Como Rezar o Terço</h2>
+    <div class="terco-conteudo">
+      <img src="terco.jpg" alt="Terço" class="terco-img">
+      <div class="terco-texto">
+        <p>O terço é uma forma de oração meditativa que nos aproxima de Jesus e de Maria. Ele é composto por contas que representam orações específicas:</p>
+        <ul>
+          <li><strong>Cruzeiro:</strong> Sinal da Cruz e Pai Nosso</li>
+          <li><strong>Contas pequenas:</strong> Ave Maria</li>
+          <li><strong>Contas maiores:</strong> Pai Nosso</li>
+          <li><strong>Meditação:</strong> Cada mistério do Rosário nos ajuda a refletir sobre a vida de Cristo e da Virgem Maria</li>
+        </ul>
+        <p>Para rezar, segure o terço, faça o Sinal da Cruz, reze o Pai Nosso no início e siga pelas contas alternando Ave Maria e Pai Nosso, enquanto medita nos mistérios correspondentes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Músicas -->
+  <section id="musicas" class="musicas">
+    <div class="container">
+      <h2>🎵 Canções Católicas</h2>
+      <p>Ouça músicas que elevam a alma e ajudam na oração.</p>
+      <a href="https://open.spotify.com/playlist/37i9dQZF1DWTx0xog3gN3q" target="_blank" class="btn">🎧 Ouvir Playlist no Spotify</a>
+    </div>
+  </section>
+
+  <!-- Catequese -->
+  <section id="catequese" class="catequese">
+    <div class="container">
+      <h2>📚 Catequese e Formação</h2>
+      <p>Conteúdos de catequese para jovens e adultos que desejam conhecer mais sobre a fé católica.</p>
+      <a href="https://catequese.net/" target="_blank" class="btn">Acessar Catequese Online</a>
+    </div>
+  </section>
+
+  <!-- Calendário -->
+  <section id="calendario" class="calendario">
+    <div class="container">
+      <h2>🗓️ Calendário Católico</h2>
+      <p>Principais datas comemorativas e celebrações litúrgicas:</p>
+      <ul>
+        <li><strong>01 de novembro:</strong> Dia de Todos os Santos</li>
+        <li><strong>02 de novembro:</strong> Dia de Finados</li>
+        <li><strong>08 de dezembro:</strong> Imaculada Conceição</li>
+        <li><strong>25 de dezembro:</strong> Natal do Senhor</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <div class="container">
+      <h2>📩 Fale Conosco</h2>
+      <p>Envie seu testemunho, pedido de oração ou mensagem. Estamos juntos em fé!</p>
+      <form>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea placeholder="Escreva sua mensagem..." required></textarea>
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+<!-- Rodapé -->
+<footer class="footer">
+  <div class="container footer-grid">
+    
+    <div class="footer-col">
+      <h3>Espalhando a Palavra de Jesus</h3>
+      <p>Portal católico com mensagens diárias, orações, reflexões e conteúdos que inspiram a fé e o amor de Deus.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#mensagens">Mensagem do Dia</a></li>
+        <li><a href="#leituras">Leituras Bíblicas</a></li>
+        <li><a href="#reflexoes">Reflexões</a></li>
+        <li><a href="#catequese">Catequese</a></li>
+      </ul>
+    </div>
+
+        <div class="footer-col">
+      <h4>Administrativo</h4>
+      <ul>
+        <li><a href="https://api.whatsapp.com/send?phone=5546999711937&text=Olá!%20Gostaria%20de%20implementar%20conteúdo%20no%20site%20Espalhando%20a%20Palavra%20de%20Jesus." target="_blank">Implementar Conteúdo</a></li>
+        <li><a href="#">Acesso Administrativo</a></li>
+        <li><a href="#contato">Fale Conosco</a></li>
+      </ul>
+    </div>
+
+<div class="footer-col">
+  <h4>Siga-nos</h4>
+  <a href="https://www.instagram.com/seuusuario" target="_blank" class="social-icon" aria-label="Instagram">
+    <img src="instagram.png" alt="Instagram" class="instagram-icon">
+  </a>
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p><strong>“Ide por todo o mundo e pregai o Evangelho a toda criatura.” — Marcos 16:15</strong></p>
+    <p>© 2025 Espalhando a Palavra de Jesus — Desenvolvido por 
+      <a href="https://potfolio-neres.vercel.app/" target="_blank">Dalton Neres - Full Stack Developer</a></p>
+    <p>Última atualização: 22/10/2025</p>
+  </div>
+</footer>
+
+  <script>
+    // === Sistema de Mensagem Diária ===
+    const mensagens = [
+      {
+        titulo: "Confie no Amor de Deus",
+        texto: "Mesmo que tudo pareça difícil, Deus continua cuidando de você. 'Lançai sobre Ele toda a vossa ansiedade, porque Ele tem cuidado de vós.' (1 Pedro 5:7)",
+        imagem: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        titulo: "A Força da Oração",
+        texto: "A oração é a chave que abre o coração de Deus. Ore com fé e verá milagres acontecerem em sua vida.",
+        imagem: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        titulo: "Deixe a Luz de Cristo Brilhar",
+        texto: "Seja luz na vida dos outros, com palavras e atitudes de amor. Jesus é o exemplo perfeito dessa luz.",
+        imagem: "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        titulo: "Deus Está no Controle",
+        texto: "Mesmo quando não entendemos, Deus tem um propósito em tudo. Confie n’Ele de todo o coração.",
+        imagem: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+      }
+    ];
+
+    const hoje = new Date();
+    const indice = hoje.getDate() % mensagens.length;
+    const mensagem = mensagens[indice];
+
+    document.getElementById("data-atual").textContent = hoje.toLocaleDateString("pt-BR", { day: '2-digit', month: 'long', year: 'numeric' });
+    document.getElementById("titulo-mensagem").textContent = mensagem.titulo;
+    document.getElementById("texto-mensagem").textContent = mensagem.texto;
+    document.getElementById("imagem-dia").src = mensagem.imagem;
+    document.getElementById("data-footer").textContent = hoje.toLocaleDateString("pt-BR");
+
+    // Compartilhar mensagem (WhatsApp)
+    document.getElementById("compartilhar").addEventListener("click", () => {
+      const texto = `${mensagem.titulo}\n\n${mensagem.texto}\n\n📖 Enviado por Espalhando a Palavra de Jesus`;
+      const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+    });
+  </script>
 </body>
 </html>
